@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="paynow.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paynow</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="./payment.png" alt="" />
+      </div>
+      <div container="buttons">
+        <div
+          class="razorpay-embed-btn"
+          data-url="https://pages.razorpay.com/pl_HXCz4s3ji13eqt/view"
+          data-text="Pay Now"
+          data-color="#FB5A32"
+          data-size="medium"
+        >
+          <script>
+            (function () {
+              var d = document;
+              var x = !d.getElementById("razorpay-embed-btn-js");
+              if (x) {
+                var s = d.createElement("script");
+                s.defer = !0;
+                s.id = "razorpay-embed-btn-js";
+                s.src = "https://cdn.razorpay.com/static/embed_btn/bundle.js";
+                d.body.appendChild(s);
+              } else {
+                var rzp = window["_rzp_"];
+                rzp && rzp.init && rzp.init();
+              }
+            })();
+          </script>
+        </div>
+        <button class="btn">
+          <a href="index.html"> Return To Home Page</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
